@@ -4,6 +4,7 @@ go:
   - master
 
 script:
+  - ./tools/lint.sh
   - go test -v -race -coverprofile=coverage.txt -covermode=atomic .
 
 after_success:
@@ -12,6 +13,6 @@ after_success:
 notifications:
   email:
     recipients:
-      secure: "BEsNpUBC3uhSw5oyAU27tvn7u5WGWANSZjRluRN1JJEtwbLUWc75SST1ygn/VHHwz7W3P3pJM55im+BYkBDtmfCjNiRsgOZ7q+eTE2h2fuG7J7Xm667m/wDKOnhYT+4JxxwY6VtGjUAogUrDEtR4V53PsO0F6vZuG+WiHjRwDzufs+c/m9d0ywPAo3FD/j2Pv8O9u0JKhdTPCvRi2Q0HcdqRlmMYTxNtDlEzz2yEF48W0E2RI5Xt4AXPd+46hXskNKCmzee+levm+wqWt7tV4eJM7Hu3auwcXTNxRKJ6RMVAuxJwRKpHhGUpnNBXoGsgtuHRaU+V66Lzuy/ntcoVAAHY/+tLp5QVkiH1zPMtSG/3AfPhg7xoKkXWYMgTTpxFZQOug7BsTIcfTr69z1MmMklNow6qQKfrj68uhKY19pgk+1LW8wjndauaxnf63C2oIbDVBTW16B1eUXlMTcxrwBCWzKbg1H1D2tJu+iFLncohWyS9a0MdEceYDtuXpJabSZjENeCMTUkDtP7eNZAE1AgZ9YRCHCX5Fr/REM9+Wo0dAnxgVrM9qjLzHaUM1D6vkt4JmwAd63+ibZ5iO87b0NPikTzHIhckiYAVawdb8rQR6M73AuySD7N25fgtcWrDf8iF46bbUj8e/mO8+dioyUjc/nKji8zso+C51S3arl4="
+      secure: 'BEsNpUBC3uhSw5oyAU27tvn7u5WGWANSZjRluRN1JJEtwbLUWc75SST1ygn/VHHwz7W3P3pJM55im+BYkBDtmfCjNiRsgOZ7q+eTE2h2fuG7J7Xm667m/wDKOnhYT+4JxxwY6VtGjUAogUrDEtR4V53PsO0F6vZuG+WiHjRwDzufs+c/m9d0ywPAo3FD/j2Pv8O9u0JKhdTPCvRi2Q0HcdqRlmMYTxNtDlEzz2yEF48W0E2RI5Xt4AXPd+46hXskNKCmzee+levm+wqWt7tV4eJM7Hu3auwcXTNxRKJ6RMVAuxJwRKpHhGUpnNBXoGsgtuHRaU+V66Lzuy/ntcoVAAHY/+tLp5QVkiH1zPMtSG/3AfPhg7xoKkXWYMgTTpxFZQOug7BsTIcfTr69z1MmMklNow6qQKfrj68uhKY19pgk+1LW8wjndauaxnf63C2oIbDVBTW16B1eUXlMTcxrwBCWzKbg1H1D2tJu+iFLncohWyS9a0MdEceYDtuXpJabSZjENeCMTUkDtP7eNZAE1AgZ9YRCHCX5Fr/REM9+Wo0dAnxgVrM9qjLzHaUM1D6vkt4JmwAd63+ibZ5iO87b0NPikTzHIhckiYAVawdb8rQR6M73AuySD7N25fgtcWrDf8iF46bbUj8e/mO8+dioyUjc/nKji8zso+C51S3arl4='
     on_success: change
     on_failure: always
