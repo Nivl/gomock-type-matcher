@@ -23,4 +23,5 @@ action "test" {
     GOFLAGS = "-mod=readonly"
     CI = "on"
   }
+  secrets = ["CODECOV_TOKEN"]
 }
